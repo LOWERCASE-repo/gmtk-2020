@@ -1,11 +1,10 @@
 using UnityEngine;
 
-class KeyTap : MonoBehaviour {
+class KeyTap : Choice {
 	
 	void Update() {
 		if (Input.GetKeyDown(KeyCode.Mouse0)) {
-			NextQuestion();
+			Respond();
 		}
 	}
-	
 }

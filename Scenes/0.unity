@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 321303595}
-  sprite: {fileID: 0}
+  image: {fileID: 1075204583}
 --- !u!223 &1385073197
 Canvas:
   m_ObjectHideFlags: 0

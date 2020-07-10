@@ -23,16 +23,21 @@ class Interviewer : MonoBehaviour {
 		if (ready && Input.GetKeyDown(KeyCode.Mouse0)) {
 			NextQuestion();
 		}
+		if (Input.GetKeyDown(KeyCode.D)) {
+			Debug.Log(Saver.state.fatigue);
+		}
 	}
 	
 	internal void Respond(string text, string sprite) {
 		this.text.text = text;
 		image.sprite = Resources.Load<Sprite>("Sprites/" + sprite);
+		ready = true;
 	}
 	
 	void NextQuestion() {
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-		if (Saver.state.fatigue >= 0) Debug.Log("fuck");
+		int index = SceneManager.GetActiveScene().buildIndex;
+		this.text.text = questions[index];
+		SceneManager.LoadScene(index + 1);
 	}
 	
 	string[] questions = {
