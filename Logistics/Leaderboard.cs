@@ -42,11 +42,8 @@ static class Leaderboard {
 
 [Serializable]
 public struct Entry {
-	public string name;
-	public int score;
-	public int seconds;
-	public string text;
-	public string date;
+	public string name, text, date;
+	public int score, seconds;
 }
 
 [Serializable]
