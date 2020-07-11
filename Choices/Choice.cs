@@ -3,7 +3,9 @@ using UnityEngine;
 class Choice : MonoBehaviour {
 	
 	[SerializeField]
-	string text, sprite;
+	string text;
+	[SerializeField]
+	Sprite sprite;
 	
 	public void Respond() {
 		Interviewer.instance.Respond(text, sprite);

@@ -3,16 +3,14 @@ using UnityEngine;
 class Motor : MonoBehaviour {
 	
 	[SerializeField]
-	private float speed = 10f;
+	float speed = 10f;
 	[SerializeField]
-	private float thrust = 10f;
+	float thrust = 10f;
 	[SerializeField]
-	private Rigidbody2D rb;
-	[SerializeField]
-	private Animator animator;
+	Rigidbody2D rb;
 	
 	internal void Move(Vector2 target) {
-		target = Predict(target, -rb.velocity, speed);
+		// target = Predict(target, -rb.velocity, speed);
 		MoveDir(target - rb.position);
 	}
 	
@@ -22,7 +20,7 @@ class Motor : MonoBehaviour {
 		rb.AddForce(force);
 	}
 	
-	private Vector2 Predict(Vector2 target, Vector2 relVel, float speed) {
+	Vector2 Predict(Vector2 target, Vector2 relVel, float speed) {
 		Vector2 dir = target - rb.position;
 		float a = speed * speed - relVel.sqrMagnitude;
 		float b = Vector2.Dot(dir, relVel);

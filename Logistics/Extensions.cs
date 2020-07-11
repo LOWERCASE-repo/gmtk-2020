@@ -6,6 +6,11 @@ internal static class Extensions {
 		return Quaternion.AngleAxis(angle, Vector3.forward);
 	}
 	
+	internal static Quaternion Rotate(this Quaternion rot, float rotation) {
+		float angle = rot.eulerAngles.z;
+		return Quaternion.Euler(0f, 0f, angle - rotation);
+	}
+	
 	internal static Vector2 Predict(this Vector2 relPos, Vector2 relVel, float speed) {
 		float a = speed * speed - relVel.sqrMagnitude;
 		float b = Vector2.Dot(relPos, relVel);

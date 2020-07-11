@@ -12,6 +12,9 @@ class Interviewer : MonoBehaviour {
 	[SerializeField]
 	Image image;
 	
+	[SerializeField]
+	Sprite[] neutrals;
+	
 	bool ready;
 	
 	void Awake() {
@@ -28,9 +31,9 @@ class Interviewer : MonoBehaviour {
 		}
 	}
 	
-	internal void Respond(string text, string sprite) {
+	internal void Respond(string text, Sprite sprite) {
 		this.text.text = text;
-		image.sprite = Resources.Load<Sprite>("Sprites/" + sprite);
+		image.sprite = sprite;
 		ready = true;
 	}
 	
@@ -38,6 +41,8 @@ class Interviewer : MonoBehaviour {
 		int index = SceneManager.GetActiveScene().buildIndex;
 		this.text.text = questions[index];
 		SceneManager.LoadScene(index + 1);
+		ready = false;
+		image.sprite = neutrals[Saver.state.fatigue];
 	}
 	
 	string[] questions = {
