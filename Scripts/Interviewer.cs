@@ -17,7 +17,7 @@ class Interviewer : MonoBehaviour {
 	Sprite[] neutrals;
 	Queue<Response> responses;
 	internal bool answered;
-	bool locked;
+	internal bool locked;
 	
 	void Awake() {
 		instance = this;
@@ -26,6 +26,7 @@ class Interviewer : MonoBehaviour {
 	}
 	
 	void Update() {
+		// Debug.Log(answered + " " + locked);
 		if (!Input.GetKeyDown(KeyCode.Mouse0)) return;
 		if (!locked) {
 			if (responses.Count == 0 && answered) NextQuestion();

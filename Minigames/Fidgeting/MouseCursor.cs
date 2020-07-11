@@ -18,9 +18,7 @@ class MouseCursor : MonoBehaviour {
 	
 	void Awake() {
 		instance = this;
-		Cursor.visible = false;
 		SceneManager.activeSceneChanged += OnSceneChange;
-		following = true;
 	}
 	
 	void Update() {
