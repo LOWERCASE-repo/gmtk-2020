@@ -75,7 +75,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_FontData.m_MinSize
-    value: 10
+    value: 8
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_FontData.m_MaxSize
@@ -99,7 +99,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_FontData.m_VerticalOverflow
-    value: 1
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_FontData.m_LineSpacing
@@ -107,5 +107,6 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_Text
-    value: Arson
+    value: I compartmentalize my mind in increasingly obtuse, hard to articulate
+      dialogue snippets.
     objectReference: {fileID: 0}

@@ -147,17 +147,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96179883}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 305200033}
   m_Father: {fileID: 1159780320}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 550, y: 250}
+  m_AnchoredPosition: {x: 550, y: 371.39996}
   m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &96179885
@@ -172,8 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495ef3a090104e447b5a64a2294811e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Bruh
-  sprite: {fileID: 21300000, guid: 31c3b62472f7d704c88e4b83408d4447, type: 3}
+  responses: []
 --- !u!114 &96179886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,9 +277,9 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 1
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Assassination
+  m_Text: 50 company branded t-shirts.
 --- !u!222 &305200035
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -340,8 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495ef3a090104e447b5a64a2294811e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: ...
-  sprite: {fileID: 21300000, guid: 31c3b62472f7d704c88e4b83408d4447, type: 3}
+  responses: []
 --- !u!114 &370043119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,7 +486,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782304768
 MonoBehaviour:
@@ -514,15 +512,16 @@ MonoBehaviour:
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 1
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Arson
+  m_Text: I compartmentalize my mind in increasingly obtuse, hard to articulate dialogue
+    snippets.
 --- !u!222 &782304769
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -622,8 +621,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 370043117}
-  - {fileID: 2069464676}
   - {fileID: 96179884}
+  - {fileID: 2069464676}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -766,7 +765,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1921053263
 MonoBehaviour:
@@ -798,9 +797,9 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 1
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hard Work
+  m_Text: Arson.
 --- !u!222 &1921053264
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -841,11 +840,11 @@ RectTransform:
   m_Children:
   - {fileID: 1921053262}
   m_Father: {fileID: 1159780320}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 550, y: 360}
+  m_AnchoredPosition: {x: 550, y: 257.57}
   m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &2069464677
@@ -860,8 +859,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495ef3a090104e447b5a64a2294811e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Glad to hear it.
-  sprite: {fileID: 21300000, guid: ac7255214f9cfaa4896e45c7aeded3ce, type: 3}
+  responses:
+  - text: "I don\u2019t suppose you have a witty story explaining what that was a
+      clever euphemism for?"
+    sprite: {fileID: 21300000, guid: c5bdffc2a937066459cd6d4fc0d2d0a1, type: 3}
+  - text: Continuing this interview is already a formality.
+    sprite: {fileID: 21300000, guid: b462ca453abfe6b4b8e09b773bc903c6, type: 3}
 --- !u!114 &2069464678
 MonoBehaviour:
   m_ObjectHideFlags: 0

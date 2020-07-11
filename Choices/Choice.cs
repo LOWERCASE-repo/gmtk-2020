@@ -3,11 +3,13 @@ using UnityEngine;
 class Choice : MonoBehaviour {
 	
 	[SerializeField]
-	string text;
-	[SerializeField]
-	Sprite sprite;
+	Response[] responses;
 	
 	public void Respond() {
-		Interviewer.instance.Respond(text, sprite);
+		foreach (Response response in responses) {
+			Interviewer.instance.Enqueue(response);
+		}
+		Interviewer.instance.answered = true;
+		Destroy(this);
 	}
 }

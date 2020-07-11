@@ -1,6 +1,7 @@
 using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 class MouseCursor : MonoBehaviour {
 	
@@ -9,31 +10,50 @@ class MouseCursor : MonoBehaviour {
 	
 	[SerializeField]
 	Camera cam;
-	Vector3 prevPos;
+	[SerializeField]
+	Image image;
+	Vector2 prevPos;
 	Vector2 lerpPos;
+	bool following;
 	
 	void Awake() {
 		instance = this;
 		Cursor.visible = false;
-		StartCoroutine(Fidget());
+		SceneManager.activeSceneChanged += OnSceneChange;
+		following = true;
 	}
 	
 	void Update() {
-		lerpPos += (Vector2)(Input.mousePosition - prevPos);
-		prevPos = Input.mousePosition;
+		if (following) {
+			transform.position = Input.mousePosition;
+		}
+	}
+	
+	void OnSceneChange(Scene current, Scene next) {
+		switch (next.buildIndex) {
+			case 1:
+			following = true;
+			Cursor.visible = false;
+			break;
+			case 2:
+			following = false;
+			StartCoroutine(Fidget());
+			break;
+			case 3:
+			StopAllCoroutines();
+			Cursor.visible = true;
+			image.enabled = false;
+			break;
+		}
 	}
 	
 	IEnumerator Fidget() {
-		if (SceneManager.GetActiveScene().buildIndex == 2) {
-			lerpPos = Input.mousePosition + (Vector3)(Random.insideUnitCircle * 100);
-			float start = Time.fixedTime;
-			for (float i = 0f; i < 0.2f; i = Time.fixedTime - start) {
-				transform.position = Vector2.Lerp(transform.position
-				, lerpPos, i / 0.2f);
-				yield return null;
-			}
-		} else {
-			transform.position = Input.mousePosition;
+		lerpPos = Input.mousePosition + (Vector3)(Random.insideUnitCircle * 100);
+		float start = Time.fixedTime;
+		for (float i = 0f; i < 0.2f; i = Time.fixedTime - start) {
+			lerpPos += (Vector2)Input.mousePosition - prevPos;
+			transform.position = Vector2.Lerp(transform.position, lerpPos, i / 0.2f);
+			prevPos = Input.mousePosition;
 			yield return null;
 		}
 		StartCoroutine(Fidget());
