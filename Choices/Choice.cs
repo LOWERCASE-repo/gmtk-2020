@@ -6,10 +6,7 @@ class Choice : MonoBehaviour {
 	Response[] responses;
 	
 	public void Respond() {
-		foreach (Response response in responses) {
-			Interviewer.instance.Enqueue(response);
-		}
+		Interviewer.instance.Enqueue(responses);
 		Interviewer.instance.answered = true;
-		Destroy(this);
 	}
 }

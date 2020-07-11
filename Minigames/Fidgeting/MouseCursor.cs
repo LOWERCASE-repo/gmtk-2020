@@ -26,6 +26,7 @@ class MouseCursor : MonoBehaviour {
 	void Update() {
 		if (following) {
 			transform.position = Input.mousePosition;
+			prevPos = Input.mousePosition;
 		}
 	}
 	

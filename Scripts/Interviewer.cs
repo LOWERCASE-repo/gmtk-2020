@@ -35,9 +35,14 @@ class Interviewer : MonoBehaviour {
 		}
 	}
 	
-	internal void Enqueue(Response response) {
-		responses.Enqueue(response);
-		if (!locked && responses.Count == 1) StartCoroutine(Read());
+	internal void Enqueue(params Response[] responses) {
+		if (!locked && !answered) {
+			foreach (Response response in responses) {
+				this.responses.Enqueue(response);
+			}
+			StartCoroutine(Read());
+			answered = true;
+		}
 	}
 	
 	IEnumerator Read() {
@@ -60,8 +65,9 @@ class Interviewer : MonoBehaviour {
 	void NextQuestion() {
 		int index = SceneManager.GetActiveScene().buildIndex;
 		SceneManager.LoadScene(index + 1);
-		Enqueue(new Response(questions[index], neutrals[Saver.state.fatigue]));
 		answered = false;
+		Enqueue(new Response(questions[index], neutrals[Saver.state.fatigue]));
+		answered = false; // yes this is necessary dont question it
 	}
 	
 	string[] questions = {
@@ -69,7 +75,8 @@ class Interviewer : MonoBehaviour {
 		"How do you handle stress?",
 		"What motivates you?",
 		"What skills do you bring to the table?",
-		"What is your expected salary?",
+		"Can you tell me about some work obstacles you've faced and how you took care of them?",
+		"What is your salary range expectation?",
 		"Is that in dollars per year, hour or second?",
 		"Where do you see yourself in five years?"
 	};
