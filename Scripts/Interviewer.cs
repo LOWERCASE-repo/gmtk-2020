@@ -15,6 +15,8 @@ class Interviewer : MonoBehaviour {
 	[SerializeField]
 	Sprite[] neutrals;
 	
+	string targetText;
+	bool scrolling;
 	bool ready;
 	
 	void Awake() {
@@ -29,6 +31,11 @@ class Interviewer : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.D)) {
 			Debug.Log(Saver.state.fatigue);
 		}
+	}
+	
+	IEnumerator Scroll(string text) {
+		this.text.text = "";
+		
 	}
 	
 	internal void Respond(string text, Sprite sprite) {
@@ -46,8 +53,12 @@ class Interviewer : MonoBehaviour {
 	}
 	
 	string[] questions = {
-		"question one",
-		"question two",
-		"question three"
+		"Tell me about yourself. What makes you unique?",
+		"... No need to be nervous.",
+		"What skills do you bring to the table?",
+		"What is your expected salary?",
+		"Is that in dollars per year, hour or second?",
+		"What motivates you?",
+		"Where do you see yourself in five years?"
 	};
 }
