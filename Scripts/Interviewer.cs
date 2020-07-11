@@ -42,14 +42,7 @@ class Interviewer : MonoBehaviour {
 	
 	string[] questions = {
 		"question one",
-		"question two"
+		"question two",
+		"question three"
 	};
 }
-
-/*
-turret shoots ball affected by gravity
-slingshot
-slot machine
-footsteps
-new scene for every level
-*/

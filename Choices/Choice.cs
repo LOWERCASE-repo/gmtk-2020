@@ -1,11 +1,11 @@
 using UnityEngine;
 
-abstract class Choice : MonoBehaviour {
+class Choice : MonoBehaviour {
 	
 	[SerializeField]
 	string text, sprite;
 	
-	protected void Respond() {
+	public void Respond() {
 		Interviewer.instance.Respond(text, sprite);
 	}
 }
