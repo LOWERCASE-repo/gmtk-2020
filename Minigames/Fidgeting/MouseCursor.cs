@@ -45,11 +45,14 @@ class MouseCursor : MonoBehaviour {
 			Cursor.visible = true;
 			image.enabled = false;
 			break;
+			case 4:
+			break;
+			
 		}
 	}
 	
 	IEnumerator Fidget() {
-		lerpPos = Input.mousePosition + (Vector3)(Random.insideUnitCircle * 100);
+		lerpPos = Input.mousePosition + (Vector3)(Random.insideUnitCircle.normalized * 100);
 		float start = Time.fixedTime;
 		for (float i = 0f; i < 0.2f; i = Time.fixedTime - start) {
 			lerpPos += (Vector2)Input.mousePosition - prevPos;
