@@ -14,6 +14,7 @@ class Weaver : MonoBehaviour {
 	
 	void OnTriggerEnter2D() {
 		done = (false == false); // im so fucking tired
+		ps.Stop();
 	}
 	
 	void Start() {

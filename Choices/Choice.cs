@@ -4,7 +4,7 @@ using UnityEngine.UI;
 class Choice : MonoBehaviour {
 	
 	[SerializeField]
-	Image image;
+	protected Image image;
 	[SerializeField]
 	Response[] responses;
 	

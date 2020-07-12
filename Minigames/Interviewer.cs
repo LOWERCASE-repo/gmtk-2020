@@ -8,8 +8,7 @@ using System.Collections.Generic;
 class Interviewer : MonoBehaviour {
 	
 	internal static Interviewer instance;
-	
-	int favour = 0;
+	internal int favour = 0;
 	
 	[SerializeField]
 	Text text;
@@ -72,6 +71,7 @@ class Interviewer : MonoBehaviour {
 	
 	void NextQuestion() {
 		int index = SceneManager.GetActiveScene().buildIndex;
+		if (index >= 7) return;
 		SceneManager.LoadScene(index + 1);
 		answered = false;
 		Enqueue(new Response(questions[index], neutrals[0]));
@@ -84,7 +84,8 @@ class Interviewer : MonoBehaviour {
 		"What motivates you?",
 		"Tell me about your problem solving skills.",
 		"Where do you see yourself in five years?",
-		"Do you have any questions for me?"
+		"Do you have any questions for me?",
+		"Tell me about yourself. What makes you unique?"
 	};
 }
 

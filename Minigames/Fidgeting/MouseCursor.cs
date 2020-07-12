@@ -43,9 +43,11 @@ class MouseCursor : MonoBehaviour {
 			Cursor.visible = true;
 			image.enabled = false;
 			break;
-			case 4:
+			case 6:
+			following = true;
+			Cursor.visible = false;
+			image.enabled = true;
 			break;
-			
 		}
 	}
 	

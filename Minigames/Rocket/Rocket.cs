@@ -11,6 +11,7 @@ class Rocket : MonoBehaviour {
 	Camera cam;
 	bool turnable;
 	float startTime;
+	bool done;
 	
 	void Start() {
 		startTime = Time.time;
@@ -28,6 +29,13 @@ class Rocket : MonoBehaviour {
 		}
 	}
 	
+	void OnCollisionEnter2D(Collision2D collision) {
+		if (collision.collider.gameObject.name != "Walls") {
+			done = true;
+			ps.Stop();
+		}
+	}
+	
 	void OnCollisionStay2D() {
 		turnable = false;
 	}
@@ -37,7 +45,7 @@ class Rocket : MonoBehaviour {
 	}
 	
 	void FixedUpdate() {
-		if (!active) return;
+		if (!active || done) return;
 		if (turnable) {
 			Vector2 dir = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 			float d = (dir.x - transform.up.x) * (-transform.up.y) - (dir.y - transform.up.y) * (-transform.up.x);

@@ -11,7 +11,7 @@ class SlotChoice : Choice {
 	}
 	
 	void Update() {
-		if (Time.time - startTime < 1.5f) return;
+		if (Time.time - startTime < 1f) return;
 		if (!Input.GetKeyDown(KeyCode.Mouse0)) return;
 		stopped = true;
 		if (transform.localPosition.y < 151f && transform.localPosition.y > 50f) {
