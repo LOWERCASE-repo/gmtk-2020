@@ -22,7 +22,7 @@ class SlotChoice : Choice {
 	void FixedUpdate() {
 		if (!stopped) {
 			// pos = new Vector2(transform.position.x, transform.position.y - 2);
-			transform.localPosition -= new Vector3(0f, 12.5f, 0f);
+			transform.localPosition -= new Vector3(0f, 10f, 0f);
 			if (transform.localPosition.y <= -200f) {
 				transform.localPosition = new Vector3(0f, 400f, 0f);
 			}

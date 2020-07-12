@@ -25,7 +25,7 @@ class Weaver : MonoBehaviour {
 	
 	void Update() {
 		if (done) return;
-		if (Time.time - startTime < 0.6f) return;
+		if (Time.time - startTime < 1f) return;
 		if (!following) {
 			Vector2 dir = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 			if (dir.sqrMagnitude < 1f) following = true;

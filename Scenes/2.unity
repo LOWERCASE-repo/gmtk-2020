@@ -254,12 +254,20 @@ MonoBehaviour:
   responses:
   - text: "Not in this building you won\u2019t."
     sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
   - text: But anywhere else? Just... try to be responsible about it.
     sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
   - text: For your own sake.
     sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
   - text: "Let\u2019s continue."
     sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
 --- !u!114 &329814241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,8 +436,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 1184561478}
   responses:
-  - text: I suppose CEOs have gotten away with more.
+  - text: I suppose CEOs have gotten away with worse.
     sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
 --- !u!114 &1184561478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,6 +610,8 @@ MonoBehaviour:
   responses:
   - text: Excellent.
     sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
 --- !u!114 &1529897339
 MonoBehaviour:
   m_ObjectHideFlags: 0

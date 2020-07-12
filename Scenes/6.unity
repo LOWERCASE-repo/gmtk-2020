@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 96179886}
   - component: {fileID: 96179885}
   m_Layer: 5
-  m_Name: num
+  m_Name: hired
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 511.2, y: 297.6}
+  m_AnchoredPosition: {x: 482.7, y: 371.3}
   m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &96179885
@@ -169,13 +169,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 96179883}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 495ef3a090104e447b5a64a2294811e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5dad0b5335afcb74d8b636bd5c7af731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 96179886}
   responses:
-  - text: My work phone is on my business card.
-    sprite: {fileID: 21300000, guid: ac7255214f9cfaa4896e45c7aeded3ce, type: 3}
+  - text: Through blood, sweat, and tears.
+    sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
+  - text: I persevered for years through grueling tests and demands.
+    sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
+  - text: But I never stopped believing in myself.
+    sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
+  - text: I believe in you, too.
+    sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
+  - text: ...Also, it helps that my family owns the ground you're standing on.
+    sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
+  badResponses:
+  - text: Through blood, sweat, and tears.
+    sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
+  - text: I persevered for years through grueling tests and demands.
+    sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
+  - text: But I never stopped believing in myself.
+    sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
+  - text: ...Also, it helps that my family owns the ground you're standing on.
+    sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
 --- !u!114 &96179886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,7 +317,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Can I get your number?
+  m_Text: How were you hired?
 --- !u!222 &305200035
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -327,7 +362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 640.8, y: 475.6}
+  m_AnchoredPosition: {x: 695.2, y: 491.49}
   m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &370043118
@@ -344,17 +379,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 370043119}
   responses:
-  - text: ...
+  - text: Hm...
     sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
   - text: Qualities like yours.
     sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
   badResponses:
-  - text: ...
+  - text: Hm...
     sprite: {fileID: 0}
+    popup: +REASON
+    deltaFavour: 0
   - text: "Think back on what you\u2019ve done this interview,"
     sprite: {fileID: 0}
+    popup: 
+    deltaFavour: 0
   - text: and don't do that.
     sprite: {fileID: 0}
+    popup: +OUCH
+    deltaFavour: 0
 --- !u!114 &370043119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,6 +436,100 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370043116}
+  m_CullTransparentMesh: 0
+--- !u!1 &442681394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 442681395}
+  - component: {fileID: 442681398}
+  - component: {fileID: 442681397}
+  - component: {fileID: 442681396}
+  m_Layer: 5
+  m_Name: num (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &442681395
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442681394}
+  m_LocalRotation: {x: 0, y: 0, z: -0.008726465, w: 0.999962}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1779488502}
+  m_Father: {fileID: 1159780320}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 620, y: 276.1}
+  m_SizeDelta: {x: 400, y: 80}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &442681396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442681394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495ef3a090104e447b5a64a2294811e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 442681397}
+  responses:
+  - text: My work phone is on my business card.
+    sprite: {fileID: 21300000, guid: ac7255214f9cfaa4896e45c7aeded3ce, type: 3}
+    popup: +PHONE NUMBER, I GUESS
+    deltaFavour: 0
+--- !u!114 &442681397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442681394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 634b0cdd556fb774d9df3ca670648528, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &442681398
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442681394}
   m_CullTransparentMesh: 0
 --- !u!1 &782304766
 GameObject:
@@ -562,6 +701,7 @@ RectTransform:
   m_Children:
   - {fileID: 370043117}
   - {fileID: 96179884}
+  - {fileID: 442681395}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -570,3 +710,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1779488501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1779488502}
+  - component: {fileID: 1779488504}
+  - component: {fileID: 1779488503}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1779488502
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779488501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 442681395}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -40, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1779488503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779488501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 0
+  m_Maskable: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 70e30a1161fca374ea4729644e2f7030, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Can I get your number?
+--- !u!222 &1779488504
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779488501}
+  m_CullTransparentMesh: 0

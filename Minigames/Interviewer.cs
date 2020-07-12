@@ -17,10 +17,17 @@ class Interviewer : MonoBehaviour {
 	[SerializeField]
 	Image finishedArrow;
 	[SerializeField]
+	PopupLauncher launcher;
+	[SerializeField]
+	AudioSource audio;
+	[SerializeField]
+	AudioClip talkSound;
+	[SerializeField]
 	Sprite[] neutrals;
 	Queue<Response> responses;
 	internal bool answered;
 	internal bool locked;
+	bool playSound;
 	// AnimationCurve curve = new AnimationCurve(new KeyFrame(0f, 0f) new KeyFrame(1f, 1f));
 	
 	void Awake() {
@@ -54,6 +61,10 @@ class Interviewer : MonoBehaviour {
 		finishedArrow.enabled = false;
 		locked = true;
 		Response response = responses.Dequeue();
+		favour += response.deltaFavour;
+		if (!string.IsNullOrEmpty(response.popup)) {
+			launcher.Launch(response.popup);
+		}
 		this.text.text = "";
 		int length = response.text.Length;
 		int index = 0;
@@ -61,6 +72,10 @@ class Interviewer : MonoBehaviour {
 		do {
 			char next = response.text[index];
 			this.text.text = string.Concat(this.text.text, next);
+			if (playSound) {
+				playSound = false;
+				audio.PlayOneShot(talkSound);
+			} else playSound = true;
 			if (next == ',' || next == '.') yield return new WaitForSeconds(0.4f);
 			yield return new WaitForSeconds(0.02f);
 			index = this.text.text.Length;
@@ -71,10 +86,10 @@ class Interviewer : MonoBehaviour {
 	
 	void NextQuestion() {
 		int index = SceneManager.GetActiveScene().buildIndex;
-		if (index >= 7) return;
+		if (index >= 7) return; // TODO fix question ask time
 		SceneManager.LoadScene(index + 1);
 		answered = false;
-		Enqueue(new Response(questions[index], neutrals[0]));
+		Enqueue(new Response(questions[index], neutrals[0], "", 0));
 		answered = false; // yes this is necessary dont question it
 	}
 	
@@ -85,18 +100,20 @@ class Interviewer : MonoBehaviour {
 		"Tell me about your problem solving skills.",
 		"Where do you see yourself in five years?",
 		"Do you have any questions for me?",
-		"Tell me about yourself. What makes you unique?"
+		"Well, thank you for coming in. You can expect to hear from us in the next day or two."
 	};
 }
 
 [Serializable]
 public struct Response {
-	public Response(string text, Sprite sprite) {
+	public Response(string text, Sprite sprite, string popup, int deltaFavour) {
 		this.text = text;
 		this.sprite = sprite;
-	} // TODO
+		this.popup = popup;
+		this.deltaFavour = deltaFavour;
+	}
 	public string text;
 	public Sprite sprite;
-	// public string popup;
-	// public int deltaFavour;
+	public string popup;
+	public int deltaFavour;
 }
