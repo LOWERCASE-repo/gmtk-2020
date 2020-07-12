@@ -176,7 +176,7 @@ MonoBehaviour:
   responses:
   - text: Through blood, sweat, and tears.
     sprite: {fileID: 0}
-    popup: 
+    popup: +BOLDNESS
     deltaFavour: 0
   - text: I persevered for years through grueling tests and demands.
     sprite: {fileID: 0}
@@ -197,7 +197,7 @@ MonoBehaviour:
   badResponses:
   - text: Through blood, sweat, and tears.
     sprite: {fileID: 0}
-    popup: 
+    popup: +BOLDNESS
     deltaFavour: 0
   - text: I persevered for years through grueling tests and demands.
     sprite: {fileID: 0}
@@ -381,7 +381,7 @@ MonoBehaviour:
   responses:
   - text: Hm...
     sprite: {fileID: 0}
-    popup: 
+    popup: +REASON
     deltaFavour: 0
   - text: Qualities like yours.
     sprite: {fileID: 0}

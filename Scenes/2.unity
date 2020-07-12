@@ -254,8 +254,8 @@ MonoBehaviour:
   responses:
   - text: "Not in this building you won\u2019t."
     sprite: {fileID: 0}
-    popup: 
-    deltaFavour: 0
+    popup: +BOLDNESS
+    deltaFavour: -2
   - text: But anywhere else? Just... try to be responsible about it.
     sprite: {fileID: 0}
     popup: 
@@ -438,8 +438,8 @@ MonoBehaviour:
   responses:
   - text: I suppose CEOs have gotten away with worse.
     sprite: {fileID: 0}
-    popup: 
-    deltaFavour: 0
+    popup: +MADNESS
+    deltaFavour: -3
 --- !u!114 &1184561478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,7 +610,7 @@ MonoBehaviour:
   responses:
   - text: Excellent.
     sprite: {fileID: 0}
-    popup: 
+    popup: +REASON
     deltaFavour: 0
 --- !u!114 &1529897339
 MonoBehaviour:

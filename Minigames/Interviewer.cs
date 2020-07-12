@@ -8,7 +8,10 @@ using System.Collections.Generic;
 class Interviewer : MonoBehaviour {
 	
 	internal static Interviewer instance;
-	internal int favour = 0;
+	internal int favour = 2;
+	// 2 is perfect is good ending
+	// 1 is a little tired and good ending
+	// 0 or less is very tired and bad ending
 	
 	[SerializeField]
 	Text text;
@@ -72,7 +75,7 @@ class Interviewer : MonoBehaviour {
 		do {
 			char next = response.text[index];
 			this.text.text = string.Concat(this.text.text, next);
-			if (playSound) {
+			if (next != ' ' && playSound) {
 				playSound = false;
 				audio.PlayOneShot(talkSound);
 			} else playSound = true;
@@ -86,7 +89,6 @@ class Interviewer : MonoBehaviour {
 	
 	void NextQuestion() {
 		int index = SceneManager.GetActiveScene().buildIndex;
-		if (index >= 7) return; // TODO fix question ask time
 		SceneManager.LoadScene(index + 1);
 		answered = false;
 		Enqueue(new Response(questions[index], neutrals[0], "", 0));
@@ -100,7 +102,8 @@ class Interviewer : MonoBehaviour {
 		"Tell me about your problem solving skills.",
 		"Where do you see yourself in five years?",
 		"Do you have any questions for me?",
-		"Well, thank you for coming in. You can expect to hear from us in the next day or two."
+		"Well, thank you for coming in. You can expect to hear from us in the next day or two.",
+		" "
 	};
 }
 
