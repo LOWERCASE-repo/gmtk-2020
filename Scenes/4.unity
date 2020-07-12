@@ -172,10 +172,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495ef3a090104e447b5a64a2294811e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 472263719}
   responses:
   - text: ... Moving on.
     sprite: {fileID: 0}
-  image: {fileID: 472263719}
 --- !u!114 &472263719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,10 +264,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495ef3a090104e447b5a64a2294811e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 555384271}
   responses:
   - text: Interesting.
     sprite: {fileID: 0}
-  image: {fileID: 555384271}
 --- !u!114 &555384271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,10 +661,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1152, y: 648}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -766,10 +766,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495ef3a090104e447b5a64a2294811e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 1833268161}
   responses:
   - text: Wonderful.
     sprite: {fileID: 0}
-  image: {fileID: 1833268161}
 --- !u!114 &1833268161
 MonoBehaviour:
   m_ObjectHideFlags: 0

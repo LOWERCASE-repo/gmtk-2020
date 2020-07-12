@@ -172,10 +172,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495ef3a090104e447b5a64a2294811e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 96179886}
   responses:
   - text: Love your enthusiasm.
     sprite: {fileID: 21300000, guid: ac7255214f9cfaa4896e45c7aeded3ce, type: 3}
-  image: {fileID: 96179886}
 --- !u!114 &96179886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,10 +342,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495ef3a090104e447b5a64a2294811e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 370043119}
   responses:
   - text: Glad to hear it.
     sprite: {fileID: 0}
-  image: {fileID: 370043119}
 --- !u!114 &370043119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,10 +509,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1152, y: 648}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -691,13 +691,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495ef3a090104e447b5a64a2294811e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 2069464678}
   responses:
   - text: "I don\u2019t suppose you have a witty story explaining what that was a
       clever euphemism for?"
     sprite: {fileID: 21300000, guid: c5bdffc2a937066459cd6d4fc0d2d0a1, type: 3}
   - text: Continuing this interview is already a formality.
     sprite: {fileID: 21300000, guid: b462ca453abfe6b4b8e09b773bc903c6, type: 3}
-  image: {fileID: 2069464678}
 --- !u!114 &2069464678
 MonoBehaviour:
   m_ObjectHideFlags: 0

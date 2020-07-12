@@ -4,19 +4,27 @@ using System.Collections;
 class Rocket : MonoBehaviour {
 	
 	[SerializeField]
-	private Motor motor;
+	Motor motor;
 	bool active;
+	Camera cam;
 	
-	private void Update() {
-		if (Input.GetAxisRaw("Vert") > 0f) {
+	void Awake() {
+		cam = Camera.main;
+		active = true;
+	}
+	
+	void Update() {
+		if (Input.GetKeyDown(KeyCode.Mouse0)) {
 			active = true;
 		}
 	}
 	
-	private void FixedUpdate() {
-		if (active) motor.MoveDir(transform.up); //  - transform.position
-		transform.rotation = transform.rotation.Rotate(Input.GetAxis("Horz") * 2f);
-		// moveDir = new Vector2(, Input.GetAxisRaw("Vert"));
-		// motor.MoveDir(moveDir);
+	void FixedUpdate() {
+		if (!active) return;
+		Vector2 dir = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+		Quaternion target = (-45f).Rot() * Quaternion.LookRotation(Vector3.forward, dir);
+		float sign = Mathf.Sign(target.eulerAngles.z - transform.rotation.eulerAngles.z - 180f);
+		transform.rotation *= (sign * 10f).Rot();
+		motor.MoveDir(45f.Rot() * transform.up);
 	}
 }

@@ -50,13 +50,14 @@ class MouseCursor : MonoBehaviour {
 	}
 	
 	IEnumerator Fidget() {
-		lerpPos = Input.mousePosition + (Vector3)(Random.insideUnitCircle.normalized * 100);
+		lerpPos = Input.mousePosition + (Vector3)(Random.insideUnitCircle * 100);
 		float start = Time.fixedTime;
 		for (float i = 0f; i < 0.2f; i = Time.fixedTime - start) {
+			// yield return null; this bug NASTY
+			yield return new WaitForEndOfFrame();
 			lerpPos += (Vector2)Input.mousePosition - prevPos;
 			transform.position = Vector2.Lerp(transform.position, lerpPos, i / 0.2f);
 			prevPos = Input.mousePosition;
-			yield return null;
 		}
 		StartCoroutine(Fidget());
 	}

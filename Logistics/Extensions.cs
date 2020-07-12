@@ -11,6 +11,8 @@ internal static class Extensions {
 		return Quaternion.Euler(0f, 0f, angle - rotation);
 	}
 	
+	// Quaternion.LookRotation(Vector3.forward, dir);
+	
 	internal static Vector2 Predict(this Vector2 relPos, Vector2 relVel, float speed) {
 		float a = speed * speed - relVel.sqrMagnitude;
 		float b = Vector2.Dot(relPos, relVel);
