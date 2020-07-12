@@ -422,7 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 1184561478}
   responses:
-  - text: ...Moving on.
+  - text: I suppose CEOs have gotten away with more.
     sprite: {fileID: 0}
 --- !u!114 &1184561478
 MonoBehaviour:
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 1529897339}
   responses:
-  - text: Wonderful.
+  - text: Excellent.
     sprite: {fileID: 0}
 --- !u!114 &1529897339
 MonoBehaviour:

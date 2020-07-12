@@ -696,8 +696,10 @@ MonoBehaviour:
   - text: "I don\u2019t suppose you have a witty story explaining what that was a
       clever euphemism for?"
     sprite: {fileID: 21300000, guid: c5bdffc2a937066459cd6d4fc0d2d0a1, type: 3}
-  - text: Continuing this interview is already a formality.
+  - text: ...no?
     sprite: {fileID: 21300000, guid: b462ca453abfe6b4b8e09b773bc903c6, type: 3}
+  - text: Continuing this interview is already a formality.
+    sprite: {fileID: 21300000, guid: 3d1849a4f3e429144a19a641089ef89e, type: 3}
 --- !u!114 &2069464678
 MonoBehaviour:
   m_ObjectHideFlags: 0
