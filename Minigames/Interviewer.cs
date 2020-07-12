@@ -9,7 +9,7 @@ class Interviewer : MonoBehaviour {
 	
 	internal static Interviewer instance;
 	
-	int favour = 2;
+	int favour = 0;
 	
 	[SerializeField]
 	Text text;
@@ -93,7 +93,9 @@ public struct Response {
 	public Response(string text, Sprite sprite) {
 		this.text = text;
 		this.sprite = sprite;
-	}
+	} // TODO
 	public string text;
 	public Sprite sprite;
+	// public string popup;
+	// public int deltaFavour;
 }

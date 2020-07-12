@@ -46,8 +46,6 @@ class Rocket : MonoBehaviour {
 		if (Input.GetKey(KeyCode.Mouse0)) {
 			motor.MoveDir(transform.up);
 			if (!ps.isEmitting) ps.Play();
-		} else {
-			ps.Stop();
-		}
+		} else ps.Stop();
 	}
 }

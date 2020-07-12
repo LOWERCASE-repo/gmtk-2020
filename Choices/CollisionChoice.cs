@@ -6,4 +6,8 @@ class CollisionChoice : Choice {
 		// Debug.Log("OOF");
 		Respond();
 	}
+	
+	void OnTriggerEnter2D() {
+		Respond();
+	}
 }
