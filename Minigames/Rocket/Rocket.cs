@@ -5,8 +5,16 @@ class Rocket : MonoBehaviour {
 	
 	[SerializeField]
 	Motor motor;
+	[SerializeField]
+	ParticleSystem ps;
 	bool active;
 	Camera cam;
+	bool turnable;
+	float startTime;
+	
+	void Start() {
+		startTime = Time.time;
+	}
 	
 	void Awake() {
 		cam = Camera.main;
@@ -14,17 +22,32 @@ class Rocket : MonoBehaviour {
 	}
 	
 	void Update() {
+		if (Time.time - startTime < 1f) return;
 		if (Input.GetKeyDown(KeyCode.Mouse0)) {
 			active = true;
 		}
 	}
 	
+	void OnCollisionStay2D() {
+		turnable = false;
+	}
+	
+	void OnCollisionExit2D() {
+		turnable = true;
+	}
+	
 	void FixedUpdate() {
 		if (!active) return;
-		Vector2 dir = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-		Quaternion target = (-45f).Rot() * Quaternion.LookRotation(Vector3.forward, dir);
-		float sign = Mathf.Sign(target.eulerAngles.z - transform.rotation.eulerAngles.z - 180f);
-		transform.rotation *= (sign * 10f).Rot();
-		motor.MoveDir(45f.Rot() * transform.up);
+		if (turnable) {
+			Vector2 dir = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+			float d = (dir.x - transform.up.x) * (-transform.up.y) - (dir.y - transform.up.y) * (-transform.up.x);
+			transform.rotation = (d * 0.5f).Rot() * transform.rotation;
+		}
+		if (Input.GetKey(KeyCode.Mouse0)) {
+			motor.MoveDir(transform.up);
+			if (!ps.isEmitting) ps.Play();
+		} else {
+			ps.Stop();
+		}
 	}
 }

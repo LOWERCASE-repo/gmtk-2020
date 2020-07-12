@@ -12,6 +12,10 @@ internal static class Extensions {
 	}
 	
 	// Quaternion.LookRotation(Vector3.forward, dir);
+	/*
+	// Quaternion target = (-45f).Rot() * Quaternion.LookRotation(Vector3.forward, dir);
+	float d = (dir.x - transform.up.x) * (-transform.up.y) - (dir.y - transform.up.y) * (-transform.up.x);
+	*/
 	
 	internal static Vector2 Predict(this Vector2 relPos, Vector2 relVel, float speed) {
 		float a = speed * speed - relVel.sqrMagnitude;

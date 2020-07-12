@@ -9,15 +9,20 @@ class Interviewer : MonoBehaviour {
 	
 	internal static Interviewer instance;
 	
+	int favour = 2;
+	
 	[SerializeField]
 	Text text;
 	[SerializeField]
 	Image image;
 	[SerializeField]
+	Image finishedArrow;
+	[SerializeField]
 	Sprite[] neutrals;
 	Queue<Response> responses;
 	internal bool answered;
 	internal bool locked;
+	// AnimationCurve curve = new AnimationCurve(new KeyFrame(0f, 0f) new KeyFrame(1f, 1f));
 	
 	void Awake() {
 		instance = this;
@@ -47,6 +52,7 @@ class Interviewer : MonoBehaviour {
 	}
 	
 	IEnumerator Read() {
+		finishedArrow.enabled = false;
 		locked = true;
 		Response response = responses.Dequeue();
 		this.text.text = "";
@@ -61,13 +67,14 @@ class Interviewer : MonoBehaviour {
 			index = this.text.text.Length;
 		} while (index != length);
 		locked = false;
+		if (answered) finishedArrow.enabled = true;
 	}
 	
 	void NextQuestion() {
 		int index = SceneManager.GetActiveScene().buildIndex;
 		SceneManager.LoadScene(index + 1);
 		answered = false;
-		Enqueue(new Response(questions[index], neutrals[Saver.state.fatigue]));
+		Enqueue(new Response(questions[index], neutrals[0]));
 		answered = false; // yes this is necessary dont question it
 	}
 	
@@ -75,11 +82,9 @@ class Interviewer : MonoBehaviour {
 		"Tell me about yourself. What makes you unique?",
 		"How do you handle stress?",
 		"What motivates you?",
-		"What skills do you bring to the table?",
-		"Can you tell me about some work obstacles you've faced and how you took care of them?",
-		"What is your salary range expectation?",
-		"Is that in dollars per year, hour or second?",
-		"Where do you see yourself in five years?"
+		"Tell me about your problem solving skills.",
+		"Where do you see yourself in five years?",
+		"Do you have any questions for me?"
 	};
 }
 
