@@ -175,9 +175,9 @@ MonoBehaviour:
   image: {fileID: 185107662}
   responses:
   - text: Rein it in, buddy.
-    sprite: {fileID: 0}
+    sprite: 3
     popup: +BAFFLING HONESTY
-    deltaFavour: 0
+    deltaFavour: -1
 --- !u!114 &185107662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,9 +675,9 @@ MonoBehaviour:
   image: {fileID: 1234653869}
   responses:
   - text: Rein it in, buddy.
-    sprite: {fileID: 0}
+    sprite: 3
     popup: +BAFFLING HONESTY
-    deltaFavour: 0
+    deltaFavour: -1
 --- !u!114 &1234653869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,9 +1019,9 @@ MonoBehaviour:
   image: {fileID: 1547954399}
   responses:
   - text: Rein it in, buddy.
-    sprite: {fileID: 0}
+    sprite: 3
     popup: +BAFFLING HONESTY
-    deltaFavour: 0
+    deltaFavour: -1
 --- !u!114 &1547954399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1213,9 +1213,9 @@ MonoBehaviour:
   image: {fileID: 1903108659}
   responses:
   - text: Rein it in, buddy.
-    sprite: {fileID: 0}
+    sprite: 3
     popup: +BAFFLING HONESTY
-    deltaFavour: 0
+    deltaFavour: -1
 --- !u!114 &1903108659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1307,7 +1307,7 @@ MonoBehaviour:
   image: {fileID: 1927313464}
   responses:
   - text: Wouldn't have it any other way.
-    sprite: {fileID: 0}
+    sprite: 1
     popup: +CORPORATE SIMP
     deltaFavour: 0
 --- !u!114 &1927313464
@@ -1401,7 +1401,7 @@ MonoBehaviour:
   image: {fileID: 2114522234}
   responses:
   - text: How sweet.
-    sprite: {fileID: 0}
+    sprite: 3
     popup: +TRAGIC CONFLICT OF INTEREST
     deltaFavour: 0
 --- !u!114 &2114522234

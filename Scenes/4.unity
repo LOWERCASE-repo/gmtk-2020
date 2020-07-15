@@ -333,10 +333,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 1850839867}
   responses:
-  - text: "What does that even\u2026 nevermind, moving on."
-    sprite: {fileID: 0}
+  - text: "What does that even\u2026"
+    sprite: 3
     popup: +BOLDNESS
     deltaFavour: -1
+  - text: Nevermind, moving on.
+    sprite: 2
+    popup: +BOLDNESS
+    deltaFavour: 0
 --- !u!61 &197885000
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -466,18 +470,18 @@ MonoBehaviour:
   image: {fileID: 1498952778}
   responses:
   - text: "I\u2019m not saying that they didn\u2019t have it coming,"
-    sprite: {fileID: 0}
+    sprite: 1
     popup: +LITERALLY ILLEGAL
-    deltaFavour: -2
+    deltaFavour: -1
   - text: "but I think I have the right to be, oh, I don\u2019t know, just a little
       bit concerned about that."
-    sprite: {fileID: 0}
+    sprite: 3
     popup: 
     deltaFavour: 0
   - text: Anyway.
-    sprite: {fileID: 0}
+    sprite: 2
     popup: 
-    deltaFavour: 0
+    deltaFavour: -1
 --- !u!61 &299742228
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5539,7 +5543,7 @@ MonoBehaviour:
   image: {fileID: 2040046543}
   responses:
   - text: "I\u2019d be impressed if you met someone who couldn\u2019t."
-    sprite: {fileID: 0}
+    sprite: 2
     popup: +BAFFLING HONESTY
     deltaFavour: -1
 --- !u!61 &1170927599
@@ -5986,9 +5990,9 @@ MonoBehaviour:
   image: {fileID: 1394258803}
   responses:
   - text: "We\u2019re always looking for people who go above and beyond."
-    sprite: {fileID: 0}
+    sprite: 1
     popup: +CORPORATE SIMP
-    deltaFavour: 0
+    deltaFavour: 1
 --- !u!61 &1434681985
 BoxCollider2D:
   m_ObjectHideFlags: 0

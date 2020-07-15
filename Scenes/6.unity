@@ -175,40 +175,40 @@ MonoBehaviour:
   image: {fileID: 96179886}
   responses:
   - text: Through blood, sweat, and tears.
-    sprite: {fileID: 0}
+    sprite: 2
     popup: +BOLDNESS
     deltaFavour: 0
   - text: I persevered for years through grueling tests and demands.
-    sprite: {fileID: 0}
+    sprite: 2
     popup: 
-    deltaFavour: 0
+    deltaFavour: -1
   - text: But I never stopped believing in myself.
-    sprite: {fileID: 0}
+    sprite: 1
     popup: 
-    deltaFavour: 0
+    deltaFavour: 1
   - text: I believe in you, too.
-    sprite: {fileID: 0}
+    sprite: 1
     popup: 
     deltaFavour: 0
   - text: ...Also, it helps that my family owns the ground you're standing on.
-    sprite: {fileID: 0}
+    sprite: 1
     popup: 
     deltaFavour: 0
   badResponses:
   - text: Through blood, sweat, and tears.
-    sprite: {fileID: 0}
+    sprite: 2
     popup: +BOLDNESS
     deltaFavour: 0
   - text: I persevered for years through grueling tests and demands.
-    sprite: {fileID: 0}
+    sprite: 2
     popup: 
-    deltaFavour: 0
+    deltaFavour: -1
   - text: But I never stopped believing in myself.
-    sprite: {fileID: 0}
+    sprite: 1
     popup: 
-    deltaFavour: 0
+    deltaFavour: 1
   - text: ...Also, it helps that my family owns the ground you're standing on.
-    sprite: {fileID: 0}
+    sprite: 1
     popup: 
     deltaFavour: 0
 --- !u!114 &96179886
@@ -380,26 +380,26 @@ MonoBehaviour:
   image: {fileID: 370043119}
   responses:
   - text: Hm...
-    sprite: {fileID: 0}
+    sprite: 3
     popup: +REASON
     deltaFavour: 0
   - text: Qualities like yours.
-    sprite: {fileID: 0}
+    sprite: 1
     popup: 
     deltaFavour: 0
   badResponses:
   - text: Hm...
-    sprite: {fileID: 0}
+    sprite: 3
     popup: +REASON
     deltaFavour: 0
   - text: "Think back on what you\u2019ve done this interview,"
-    sprite: {fileID: 0}
+    sprite: 0
     popup: 
     deltaFavour: 0
   - text: and don't do that.
-    sprite: {fileID: 0}
+    sprite: 2
     popup: +OUCH
-    deltaFavour: 0
+    deltaFavour: -1
 --- !u!114 &370043119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,7 +491,7 @@ MonoBehaviour:
   image: {fileID: 442681397}
   responses:
   - text: My work phone is on my business card.
-    sprite: {fileID: 21300000, guid: ac7255214f9cfaa4896e45c7aeded3ce, type: 3}
+    sprite: 0
     popup: +PHONE NUMBER, I GUESS
     deltaFavour: 0
 --- !u!114 &442681397

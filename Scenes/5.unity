@@ -255,7 +255,7 @@ MonoBehaviour:
   image: {fileID: 1394258803}
   responses:
   - text: "I\u2019m sorry to hear that, and I wish you the best of luck."
-    sprite: {fileID: 0}
+    sprite: 0
     popup: +DEPRESSION
     deltaFavour: -1
 --- !u!61 &299742228
@@ -409,9 +409,9 @@ MonoBehaviour:
   image: {fileID: 1498952778}
   responses:
   - text: "We\u2019ll see about that."
-    sprite: {fileID: 0}
+    sprite: 3
     popup: +MADNESS
-    deltaFavour: -1
+    deltaFavour: 0
 --- !u!61 &648534175
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5761,7 +5761,7 @@ MonoBehaviour:
   image: {fileID: 2040046543}
   responses:
   - text: Wonderful.
-    sprite: {fileID: 0}
+    sprite: 1
     popup: +CORPORATE SIMP
     deltaFavour: 0
 --- !u!61 &1532582040

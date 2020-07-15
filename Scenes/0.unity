@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 28071608}
   - component: {fileID: 28071607}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Finished
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -250,7 +250,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1385073195}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 225}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28071605}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1255,6 +1255,7 @@ RectTransform:
   m_Children:
   - {fileID: 1075204582}
   - {fileID: 321303594}
+  - {fileID: 1941074270}
   - {fileID: 28071606}
   m_Father: {fileID: 771202562}
   m_RootOrder: 1
@@ -1278,14 +1279,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 321303595}
   image: {fileID: 1075204583}
+  eyebags: {fileID: 1941074271}
   finishedArrow: {fileID: 28071607}
   launcher: {fileID: 497882532}
   audio: {fileID: 1385073199}
   talkSound: {fileID: 8300000, guid: ea458353dd81e504f92e8c99a07f460d, type: 3}
-  neutrals:
-  - {fileID: 21300000, guid: e2d46fda02550914982a876d26f8cd5f, type: 3}
-  - {fileID: 21300000, guid: e2d46fda02550914982a876d26f8cd5f, type: 3}
-  - {fileID: 21300000, guid: e2d46fda02550914982a876d26f8cd5f, type: 3}
+  bases:
+  - {fileID: 21300000, guid: 37b750721d5d6c748a70648346ec1f5e, type: 3}
+  - {fileID: 21300000, guid: 00ed473018c5905448b39254a1004826, type: 3}
+  - {fileID: 21300000, guid: 6fcef05708a6b8d44a3d73574df3e0cd, type: 3}
+  - {fileID: 21300000, guid: baa96517017db5b48bd5b26ed7ca42dd, type: 3}
+  clearBags: {fileID: 21300000, guid: f5cfa27c501fc684396457a882d55129, type: 3}
+  lightBags:
+  - {fileID: 21300000, guid: 52d9076a799db8b458809958ce5de67b, type: 3}
+  - {fileID: 21300000, guid: 64e746e3f1e9ce54cb9f8f95d925763b, type: 3}
+  - {fileID: 21300000, guid: b7a71bfec8a1d94458efb38b01f9fae2, type: 3}
+  - {fileID: 21300000, guid: 52d9076a799db8b458809958ce5de67b, type: 3}
+  doomBags:
+  - {fileID: 21300000, guid: e8f32e2716443d3439fd5d057cd924fd, type: 3}
+  - {fileID: 21300000, guid: 3d12b217bfe11ea4ab347b92f2fda4d2, type: 3}
+  - {fileID: 21300000, guid: e14cd8f44e4d57b478c7fc08bbed2018, type: 3}
+  - {fileID: 21300000, guid: e8f32e2716443d3439fd5d057cd924fd, type: 3}
 --- !u!223 &1385073197
 Canvas:
   m_ObjectHideFlags: 0
@@ -1513,6 +1527,80 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887631853}
+  m_CullTransparentMesh: 0
+--- !u!1 &1941074269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1941074270}
+  - component: {fileID: 1941074272}
+  - component: {fileID: 1941074271}
+  m_Layer: 4
+  m_Name: Eyebags
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1941074270
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941074269}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1385073195}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1152, y: 648}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1941074271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941074269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e2d46fda02550914982a876d26f8cd5f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1941074272
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941074269}
   m_CullTransparentMesh: 0
 --- !u!1 &2063663287
 GameObject:

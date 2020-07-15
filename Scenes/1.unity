@@ -175,7 +175,7 @@ MonoBehaviour:
   image: {fileID: 96179886}
   responses:
   - text: That sure is a lot of enthusiasm.
-    sprite: {fileID: 21300000, guid: ac7255214f9cfaa4896e45c7aeded3ce, type: 3}
+    sprite: 3
     popup: +CORPORATE SIMP
     deltaFavour: 0
 --- !u!114 &96179886
@@ -347,7 +347,7 @@ MonoBehaviour:
   image: {fileID: 370043119}
   responses:
   - text: That's great to hear.
-    sprite: {fileID: 21300000, guid: e2d46fda02550914982a876d26f8cd5f, type: 3}
+    sprite: 1
     popup: +REASON
     deltaFavour: 0
 --- !u!114 &370043119
@@ -699,17 +699,17 @@ MonoBehaviour:
   responses:
   - text: "I don\u2019t suppose you have a witty story explaining what that was a
       clever euphemism for?"
-    sprite: {fileID: 21300000, guid: c5bdffc2a937066459cd6d4fc0d2d0a1, type: 3}
+    sprite: 3
     popup: +LITERALLY ILLEGAL
-    deltaFavour: -4
+    deltaFavour: 0
   - text: ...no?
-    sprite: {fileID: 21300000, guid: b462ca453abfe6b4b8e09b773bc903c6, type: 3}
+    sprite: 0
     popup: 
-    deltaFavour: 0
+    deltaFavour: -1
   - text: Continuing this interview is already a formality.
-    sprite: {fileID: 21300000, guid: 3d1849a4f3e429144a19a641089ef89e, type: 3}
+    sprite: 2
     popup: 
-    deltaFavour: 0
+    deltaFavour: -1
 --- !u!114 &2069464678
 MonoBehaviour:
   m_ObjectHideFlags: 0

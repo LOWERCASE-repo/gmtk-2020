@@ -169,13 +169,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 96179883}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 495ef3a090104e447b5a64a2294811e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5dad0b5335afcb74d8b636bd5c7af731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 96179886}
   responses:
   - text: Of course. Bye.
-    sprite: {fileID: 0}
+    sprite: 1
+    popup: 
+    deltaFavour: 0
+  badResponses:
+  - text: Of course. Bye.
+    sprite: 0
     popup: 
     deltaFavour: 0
 --- !u!114 &96179886
